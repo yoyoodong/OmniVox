@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>状态词库 - 语音技能交互研究</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">语音技能交互研究</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#user-experience">用户体验</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#voice-design">语音设计</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#persona">角色设定</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#dialogue">对话模式</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#examples">对话示例</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#checklist">检查清单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="interactive-demo.html">交互式演示</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="搜索内容...">
+                    <button class="search-button" id="search-button">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>状态词库</h1>
+            <p>构建全面的设备状态表达体系，实现精准的状态理解与控制</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container py-5">
+        <!-- 状态词库重要性 -->
+        <section class="content-block">
+            <h2>状态词库的重要性</h2>
+            <p>状态词库是语音交互系统中不可或缺的组成部分，它使系统能够准确理解用户对设备状态的描述和控制需求。状态词库的建立有以下几个关键意义：</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">精准状态理解</h5>
+                            <p class="card-text">用户在描述设备状态时常常使用多种表达方式，如"灯亮着"、"灯开着"或"灯是打开的"。状态词库能够将这些不同表达映射到统一的系统状态，确保准确理解。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">模糊表达处理</h5>
+                            <p class="card-text">用户常使用模糊表达，如"亮一点"、"暗一些"、"温度高一点"。状态词库能够将这些相对表达转换为具体的操作指令。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">状态查询支持</h5>
+                            <p class="card-text">支持用户查询设备当前状态，如"空调现在是什么温度"、"窗帘开了多少"，并能以自然语言方式回应。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">多设备状态协调</h5>
+                            <p class="card-text">在复杂场景中，多个设备状态可能需要协同变化，如"营造电影氛围"可能涉及调暗灯光、关闭窗帘、调低音量等多设备状态变化。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 状态词库组成 -->
+        <section class="content-block">
+            <h2>状态词库组成</h2>
+            <p>一个完整的状态词库应包含以下几个主要部分：</p>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>二元状态表达</h3>
+                </div>
+                <div class="card-body">
+                    <p>针对只有两种状态的设备（如开/关）的表达方式：</p>
+                    <ul>
+                        <li><strong>开启状态表达</strong>：开着、打开了、亮着、启动了、运行中、工作中等</li>
+                        <li><strong>关闭状态表达</strong>：关着、关掉了、熄灭了、停止了、不工作了等</li>
+                        <li><strong>状态询问</strong>：开着吗、亮着吗、工作中吗、运行了吗等</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>多级状态表达</h3>
+                </div>
+                <div class="card-body">
+                    <p>针对有多个等级或数值状态的设备：</p>
+                    <ul>
+                        <li><strong>精确数值表达</strong>：温度26度、亮度50%、音量70分贝等</li>
+                        <li><strong>相对数值表达</strong>：再高两度、亮一点、暗一些、再大声一点等</li>
+                        <li><strong>模糊程度表达</strong>：很亮、有点暗、特别热、稍微冷等</li>
+                        <li><strong>极限状态表达</strong>：最亮、最暗、最大、最小、最热、最冷等</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>模式状态表达</h3>
+                </div>
+                <div class="card-body">
+                    <p>针对具有特定工作模式的设备：</p>
+                    <ul>
+                        <li><strong>空调模式</strong>：制冷模式、制热模式、除湿模式、自动模式等</li>
+                        <li><strong>洗衣机模式</strong>：标准洗、快速洗、轻柔洗、大件洗等</li>
+                        <li><strong>灯光模式</strong>：阅读模式、影院模式、会客模式、睡眠模式等</li>
+                        <li><strong>场景模式</strong>：早晨模式、离家模式、回家模式、睡眠模式等</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>状态修饰词</h3>
+                </div>
+                <div class="card-body">
+                    <p>用于修饰状态的词汇：</p>
+                    <ul>
+                        <li><strong>程度修饰</strong>：非常、特别、稍微、有点、一点点等</li>
+                        <li><strong>时间修饰</strong>：一直、刚刚、马上、立即、稍后等</li>
+                        <li><strong>频率修饰</strong>：总是、经常、偶尔、很少、从不等</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实现方法 -->
+        <section class="content-block">
+            <h2>实现方法</h2>
+            <p>构建高效的状态词库需要系统性的方法和持续优化：</p>
+
+            <div class="implementation-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>状态表达收集</h4>
+                        <p>通过用户研究、语料分析和行业标准收集各类设备的状态表达方式，建立初始词库。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>状态表达分类</h4>
+                        <p>将收集的表达按设备类型、状态类型（二元、多级、模式）和表达方式（精确、相对、模糊）进行分类。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>状态映射规则</h4>
+                        <p>建立状态表达与系统内部状态的映射规则，如何将"亮一点"转换为具体的亮度增加值。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>模糊逻辑处理</h4>
+                        <p>针对模糊表达，设计模糊逻辑处理机制，如"有点冷"可能对应温度上调2-3度。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>上下文关联</h4>
+                        <p>考虑对话上下文对状态理解的影响，如"再高一点"需要知道当前讨论的是什么设备的什么状态。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>反馈机制设计</h4>
+                        <p>设计系统如何反馈状态变化，如"已将温度调高到26度"或"灯光已调暗"。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h4>持续优化</h4>
+                        <p>通过用户反馈和实际使用数据不断优化状态词库和处理逻辑。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用案例 -->
+        <section class="content-block">
+            <h2>应用案例</h2>
+            <p>以下是状态词库在实际场景中的应用案例：</p>
+
+            <div class="case-study">
+                <h3>智能照明控制</h3>
+                
+                <div class="dialogue-example">
+                    <div class="dialogue-line user">
+                        <span class="speaker">用户：</span>
+                        <span class="dialogue-text">客厅灯太亮了，调暗一点</span>
+                    </div>
+                    <div class="dialogue-line assistant">
+                        <span class="speaker">助手：</span>
+                        <span class="dialogue-text">好的，已将客厅灯光亮度从80%调整到60%</span>
+                    </div>
+                    <div class="dialogue-line user">
+                        <span class="speaker">用户：</span>
+                        <span class="dialogue-text">再暗一点</span>
+                    </div>
+                    <div class="dialogue-line assistant">
+                        <span class="speaker">助手：</span>
+                        <span class="dialogue-text">已将亮度调整到40%，这样可以吗？</span>
+                    </div>
+                </div>
+                
+                <div class="case-analysis">
+                    <h4>分析：</h4>
+                    <ul>
+                        <li>系统识别"太亮了"为当前状态评价，"调暗一点"为相对状态变化指令</li>
+                        <li>系统给出具体的亮度变化反馈，从80%到60%</li>
+                        <li>用户说"再暗一点"时，系统理解这是在上一次操作基础上的进一步调整</li>
+                        <li>系统在第二次调整后主动询问是否满意，为用户提供进一步调整的机会</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-study mt-4">
+                <h3>空调温度控制</h3>
+                
+                <div class="dialogue-example">
+                    <div class="dialogue-line user">
+                        <span class="speaker">用户：</span>
+                        <span class="dialogue-text">卧室有点热，把温度调低一些</span>
+                    </div>
+                    <div class="dialogue-line assistant">
+                        <span class="speaker">助手：</span>
+                        <span class="dialogue-text">好的，已将卧室空调温度从26度调整到24度</span>
+                    </div>
+                    <div class="dialogue-line user">
+                        <span class="speaker">用户：</span>
+                        <span class="dialogue-text">现在空调是什么模式？</span>
+                    </div>
+                    <div class="dialogue-line assistant">
+                        <span class="speaker">助手：</span>
+                        <span class="dialogue-text">卧室空调当前为制冷模式，温度设置为24度，风速为自动</span>
+                    </div>
+                </div>
+                
+                <div class="case-analysis">
+                    <h4>分析：</h4>
+                    <ul>
+                        <li>系统理解"有点热"是对当前环境的状态描述，"调低一些"是相对状态变化指令</li>
+                        <li>系统根据"有点热"的程度，将温度调低2度，并给出明确反馈</li>
+                        <li>用户询问当前模式时，系统能够提供完整的状态信息，包括模式、温度和风速</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 优化建议 -->
+        <section class="content-block">
+            <h2>优化建议</h2>
+            <div class="tips-box">
+                <h3>提升状态词库效果的关键建议</h3>
+                <ol>
+                    <li>
+                        <strong>个性化适应</strong>
+                        <p>根据用户的使用习惯调整状态理解的精确度，如有些用户说"亮一点"可能期望亮度增加10%，而其他用户可能期望增加30%。</p>
+                    </li>
+                    <li>
+                        <strong>多模态结合</strong>
+                        <p>结合语音、手势和界面操作，提供更直观的状态调整体验，如用户说"亮一点"的同时可以通过手势指示调整幅度。</p>
+                    </li>
+                    <li>
+                        <strong>状态记忆与恢复</strong>
+                        <p>记录用户常用的状态设置，支持如"把客厅灯调回昨晚的亮度"这样的指令。</p>
+                    </li>
+                    <li>
+                        <strong>场景联动</strong>
+                        <p>将状态变化与场景联系起来，如"我要看电影了"可以触发一系列状态变化，包括调暗灯光、关闭窗帘等。</p>
+                    </li>
+                    <li>
+                        <strong>主动状态建议</strong>
+                        <p>系统可以根据环境和用户习惯主动提出状态调整建议，如"检测到室外光线变暗，是否需要打开灯光？"</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 相关内容推荐 -->
+        <section class="content-block">
+            <h2>相关内容推荐</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">devices</span>
+                        </div>
+                        <h3>设备词典</h3>
+                        <p>了解如何构建全面的设备名称识别体系，提升语音交互准确性。</p>
+                        <a href="device-vocabulary.html" class="btn btn-link">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">room</span>
+                        </div>
+                        <h3>空间词典</h3>
+                        <p>探索如何构建家居空间位置识别体系，实现精准的空间定位与控制。</p>
+                        <a href="space-vocabulary.html" class="btn btn-link">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">touch_app</span>
+                        </div>
+                        <h3>动作词库</h3>
+                        <p>了解如何构建丰富的设备控制动作词汇体系，实现自然流畅的语音控制。</p>
+                        <a href="action-vocabulary.html" class="btn btn-link">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>语音技能交互研究</h3>
+                    <p>探索语音交互的奥秘，提升用户体验</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>主要研究领域</h3>
+                    <ul>
+                        <li><a href="../index.html#user-experience">用户体验</a></li>
+                        <li><a href="../index.html#voice-design">语音设计</a></li>
+                        <li><a href="../index.html#persona">角色设定</a></li>
+                        <li><a href="../index.html#dialogue">对话模式</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>资源链接</h3>
+                    <ul>
+                        <li><a href="../index.html#examples">对话示例</a></li>
+                        <li><a href="../index.html#checklist">设计检查清单</a></li>
+                        <li><a href="../index.html#voice-recognition">声纹识别</a></li>
+                        <li><a href="interactive-demo.html">交互式演示</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 语音技能交互研究. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" class="theme-toggle">
+        <span class="material-icons">dark_mode</span>
+    </button>
+
+    <!-- JavaScript 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html> 

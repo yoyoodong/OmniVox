@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交互式演示 - 语音技能交互研究</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">语音技能交互研究</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#user-experience">用户体验</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#voice-design">语音设计</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#persona">角色设定</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#dialogue">对话模式</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#examples">对话示例</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#checklist">检查清单</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="搜索内容...">
+                    <button class="search-button" id="search-button">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>交互式演示</h1>
+            <p>体验语音交互的真实场景，探索不同场景下的对话模式</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container py-5">
+        <!-- 语音交互演示 -->
+        <section class="content-block">
+            <h2>语音助手交互演示</h2>
+            <p>通过这个交互式演示，您可以体验不同场景下的语音交互效果。选择一个场景，然后通过文本输入或模拟语音输入与助手进行对话。</p>
+            
+            <div class="demo-container" id="voice-demo">
+                <div class="demo-header">
+                    <h3 class="demo-title">语音助手</h3>
+                    <div class="demo-controls">
+                        <button class="btn btn-sm btn-outline-primary scenario-button active" data-scenario="home">智能家居</button>
+                        <button class="btn btn-sm btn-outline-primary scenario-button" data-scenario="weather">天气查询</button>
+                        <button class="btn btn-sm btn-outline-primary scenario-button" data-scenario="music">音乐控制</button>
+                    </div>
+                </div>
+                <div class="demo-content">
+                    <div class="voice-demo">
+                        <div class="voice-chat"></div>
+                        <div class="voice-input">
+                            <input type="text" placeholder="输入您想说的话...">
+                            <button class="voice-button voice-mic">
+                                <span class="material-icons">mic_none</span>
+                            </button>
+                            <button class="voice-button voice-send">
+                                <span class="material-icons">send</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用说明 -->
+        <section class="content-block">
+            <h2>使用说明</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">智能家居场景</h5>
+                            <p class="card-text">在这个场景中，您可以尝试控制家中的智能设备，如灯光、窗帘、空调等。</p>
+                            <h6>示例指令：</h6>
+                            <ul>
+                                <li>打开客厅的灯</li>
+                                <li>关闭卧室的空调</li>
+                                <li>窗帘拉开一半</li>
+                                <li>现在室内温度是多少</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">天气查询场景</h5>
+                            <p class="card-text">在这个场景中，您可以询问天气相关的信息，如温度、降雨概率、穿衣建议等。</p>
+                            <h6>示例指令：</h6>
+                            <ul>
+                                <li>今天北京天气怎么样</li>
+                                <li>明天会下雨吗</li>
+                                <li>今天适合穿什么衣服</li>
+                                <li>上海的气温是多少</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">音乐控制场景</h5>
+                            <p class="card-text">在这个场景中，您可以控制音乐播放，如播放、暂停、切换歌曲、调整音量等。</p>
+                            <h6>示例指令：</h6>
+                            <ul>
+                                <li>播放周杰伦的歌</li>
+                                <li>暂停播放</li>
+                                <li>下一首</li>
+                                <li>把音量调高一点</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 设计原则 -->
+        <section class="content-block">
+            <h2>语音交互设计原则</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">自然对话流程</h5>
+                            <p class="card-text">语音交互应当模拟自然人际对话的流程，包括问候、理解意图、确认、执行、反馈等环节。助手的回应应当简洁明了，避免冗长的解释。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">上下文理解</h5>
+                            <p class="card-text">优秀的语音交互系统应当能够理解对话的上下文，记住之前的交互内容，使用户不必在每次交互时重复已经提供的信息。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">错误处理</h5>
+                            <p class="card-text">当系统无法理解用户的意图时，应当给予明确的反馈，并提供可行的解决方案或引导用户使用正确的指令格式。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">一致的人格</h5>
+                            <p class="card-text">语音助手应当保持一致的人格特征，包括语气、用词、回应方式等，以建立用户对系统的信任和熟悉感。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关内容推荐 -->
+        <section class="content-block">
+            <h2>相关内容推荐</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <h3>角色设定</h3>
+                        <p>了解如何为语音助手设计鲜明的人格特征，创造情感连接。</p>
+                        <a href="persona.html" class="btn btn-link">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">forum</span>
+                        </div>
+                        <h3>对话模式</h3>
+                        <p>探索如何设计自然流畅的对话流程，提升用户体验。</p>
+                        <a href="../index.html#dialogue" class="btn btn-link">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">check_circle</span>
+                        </div>
+                        <h3>设计检查清单</h3>
+                        <p>确保语音交互体验的完整性和用户友好性。</p>
+                        <a href="../index.html#checklist" class="btn btn-link">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>语音技能交互研究</h3>
+                    <p>探索语音交互的奥秘，提升用户体验</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>主要研究领域</h3>
+                    <ul>
+                        <li><a href="../index.html#user-experience">用户体验</a></li>
+                        <li><a href="../index.html#voice-design">语音设计</a></li>
+                        <li><a href="../index.html#persona">角色设定</a></li>
+                        <li><a href="../index.html#dialogue">对话模式</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>资源链接</h3>
+                    <ul>
+                        <li><a href="../index.html#examples">对话示例</a></li>
+                        <li><a href="../index.html#checklist">设计检查清单</a></li>
+                        <li><a href="../index.html#voice-recognition">声纹识别</a></li>
+                        <li><a href="interactive-demo.html">交互式演示</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 语音技能交互研究. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" class="theme-toggle">
+        <span class="material-icons">dark_mode</span>
+    </button>
+
+    <!-- JavaScript 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/demo.js"></script>
+</body>
+</html> 
