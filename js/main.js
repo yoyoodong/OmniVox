@@ -29,39 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 主题切换功能
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleButton.querySelector('.material-icons');
-    
-    // 检查本地存储中的主题设置
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
-    }
-    
-    // 主题切换按钮点击事件
-    themeToggleButton.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        let newTheme = 'light';
-        
-        if (!currentTheme || currentTheme === 'light') {
-            newTheme = 'dark';
-        }
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-    
-    // 更新主题图标
-    function updateThemeIcon(theme) {
-        if (theme === 'dark') {
-            themeIcon.textContent = 'light_mode';
-        } else {
-            themeIcon.textContent = 'dark_mode';
-        }
-    }
+
     
     // 导航链接平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
