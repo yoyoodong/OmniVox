@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音技能交互研究</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="material-icons">record_voice_over</span>
+                语音技能交互研究
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#user-experience">用户体验</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#voice-design">语音设计</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#persona">角色设定</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dialogue">对话模式</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#examples">对话示例</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#checklist">检查清单</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <h1>语音技能交互研究</h1>
+                    <p class="lead">打造自然、高效、个性化的语音交互体验</p>
+                    <a href="#user-experience" class="btn btn-primary btn-lg">开始探索</a>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="hero-image">
+                        <svg class="voice-wave" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                            <path class="wave wave1" d="M0,50 Q25,30 50,50 T100,50 T150,50 T200,50" />
+                            <path class="wave wave2" d="M0,50 Q25,40 50,50 T100,50 T150,50 T200,50" />
+                            <path class="wave wave3" d="M0,50 Q25,20 50,50 T100,50 T150,50 T200,50" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 内容概览 - 紧凑卡片式布局 -->
+        <section id="overview" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>语音交互研究概览</h2>
+                    <p>探索语音交互的奥秘</p>
+                </div>
+                
+                <div class="row mt-4">
+                    <!-- 用户体验卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#userExperienceCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">psychology</span>
+                            </div>
+                            <h3>用户体验与意图理解</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="userExperienceCollapse">
+                            <div class="card-content">
+                                <p>超越传统的"唤醒-理解-执行"，深入高层，使用"我"来应对前所未有的情境、场景、用户习惯。</p>
+                                <a href="pages/user-experience.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 语音设计卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#voiceDesignCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">record_voice_over</span>
+                            </div>
+                            <h3>语音反馈设计</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="voiceDesignCollapse">
+                            <div class="card-content">
+                                <p>设计优质的语音反馈，实现自然流畅的用户体验，构建多层次的语义词库体系。</p>
+                                <div class="sub-links">
+                                    <a href="pages/device-vocabulary.html" class="btn btn-link btn-sm">设备词典</a>
+                                    <a href="pages/space-vocabulary.html" class="btn btn-link btn-sm">空间词典</a>
+                                    <a href="pages/action-vocabulary.html" class="btn btn-link btn-sm">动作词库</a>
+                                    <a href="pages/status-vocabulary.html" class="btn btn-link btn-sm">状态词库</a>
+                                </div>
+                                <a href="pages/voice-design.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 角色设定卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#personaCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">face</span>
+                            </div>
+                            <h3>角色设定 (Persona)</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="personaCollapse">
+                            <div class="card-content">
+                                <p>语音助手不仅仅是冰冷的机器，而是一个有着自己说话风格、性格特点的值得信赖的伙伴。</p>
+                                <a href="pages/persona.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 对话模式卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#dialogueCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">forum</span>
+                            </div>
+                            <h3>对话模式与设计</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="dialogueCollapse">
+                            <div class="card-content">
+                                <p>维持对话上下文状态，进行关键词与意图识别，组织清晰、简洁、自然的回复内容。</p>
+                                <div class="sub-links">
+                                    <a href="pages/context-management.html" class="btn btn-link btn-sm">上下文管理</a>
+                                    <a href="pages/intent-recognition.html" class="btn btn-link btn-sm">意图识别</a>
+                                    <a href="pages/response-organization.html" class="btn btn-link btn-sm">回复组织</a>
+                                </div>
+                                <a href="pages/dialogue.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 对话示例卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#examplesCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">chat</span>
+                            </div>
+                            <h3>对话示例</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="examplesCollapse">
+                            <div class="card-content">
+                                <p>真实场景下的对话交互案例，展示如何处理用户意图、多轮对话和异常情况。</p>
+                                <div class="sub-links">
+                                    <a href="pages/example-home.html" class="btn btn-link btn-sm">家居场景</a>
+                                    <a href="pages/example-security.html" class="btn btn-link btn-sm">安全场景</a>
+                                    <a href="pages/example-query.html" class="btn btn-link btn-sm">查询场景</a>
+                                </div>
+                                <a href="pages/examples.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 检查清单卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#checklistCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">checklist</span>
+                            </div>
+                            <h3>设计检查清单</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="checklistCollapse">
+                            <div class="card-content">
+                                <p>确保语音交互体验的完整性和用户友好，包含基础功能和进阶功能检查项目。</p>
+                                <a href="pages/checklist.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 声纹识别卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#voiceRecognitionCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">fingerprint</span>
+                            </div>
+                            <h3>声纹识别与个性化</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="voiceRecognitionCollapse">
+                            <div class="card-content">
+                                <p>通过声纹识别实现个性化的交互体验，让"我"这一概念在家庭场景中统一实体。</p>
+                                <div class="sub-links">
+                                    <a href="pages/voice-enrollment.html" class="btn btn-link btn-sm">声纹注册</a>
+                                    <a href="pages/personalization.html" class="btn btn-link btn-sm">个性化配置</a>
+                                    <a href="pages/decision-engine.html" class="btn btn-link btn-sm">决策引擎</a>
+                                </div>
+                                <a href="pages/voice-recognition.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 多模态交互卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#multimodalCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">touch_app</span>
+                            </div>
+                            <h3>多模态交互</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="multimodalCollapse">
+                            <div class="card-content">
+                                <p>结合语音、视觉和手势，创造更丰富的交互体验，适应不同场景的需求。</p>
+                                <a href="pages/multimodal.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 异常处理卡片 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="overview-card" data-bs-toggle="collapse" data-bs-target="#errorHandlingCollapse" aria-expanded="false">
+                            <div class="card-icon">
+                                <span class="material-icons">error_outline</span>
+                            </div>
+                            <h3>异常处理与修复</h3>
+                            <div class="card-toggle">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="errorHandlingCollapse">
+                            <div class="card-content">
+                                <p>识别错误的有效处理，如何应对识别失败、意图不明确、设备离线等异常情况。</p>
+                                <a href="pages/error-handling.html" class="btn btn-outline-primary btn-sm">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色内容区域 -->
+        <section id="featured" class="section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>特色研究内容</h2>
+                    <p>深入了解语音交互的核心技术和设计理念</p>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-lg-6 mb-4">
+                        <div class="featured-card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <div class="featured-image">
+                                        <img src="images/voice-design.svg" alt="语音设计词库体系" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="featured-content">
+                                        <h3>语义词库体系</h3>
+                                        <p>构建多层次语义词库，包括设备词典、空间词典、动作同义词库和状态词库，提升识别准确性。</p>
+                                        <a href="pages/voice-design.html" class="btn btn-sm btn-primary">详细了解</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="featured-card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <div class="featured-image">
+                                        <img src="images/persona.svg" alt="助手角色设定" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="featured-content">
+                                        <h3>助手角色设定</h3>
+                                        <p>赋予AI助手温暖可靠的家庭助手形象，具备智能、温暖、可靠和理解力强的特质，增强用户信任感。</p>
+                                        <a href="pages/persona.html" class="btn btn-sm btn-primary">详细了解</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="featured-card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <div class="featured-image">
+                                        <img src="images/voice-recognition.svg" alt="声纹识别" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="featured-content">
+                                        <h3>声纹识别与个性化</h3>
+                                        <p>通过声纹识别技术，实现个性化的家居体验，为每位家庭成员提供量身定制的智能服务。</p>
+                                        <a href="pages/voice-recognition.html" class="btn btn-sm btn-primary">详细了解</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="featured-card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <div class="featured-image">
+                                        <div class="dialogue-icon">
+                                            <span class="material-icons">chat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="featured-content">
+                                        <h3>对话管理技术</h3>
+                                        <p>维持对话上下文状态，处理指代消解、补全不完整信息、持续对话和对话阶段性状态管理。</p>
+                                        <a href="pages/dialogue.html" class="btn btn-sm btn-primary">详细了解</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>语音技能交互研究</h4>
+                    <p>打造自然、高效、个性化的语音交互体验</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#overview">研究概览</a></li>
+                        <li><a href="#featured">特色内容</a></li>
+                        <li><a href="pages/about.html">关于我们</a></li>
+                    </ul>
+                    <p class="copyright">© 2023 语音技能交互研究. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- JavaScript 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

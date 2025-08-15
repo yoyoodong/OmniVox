@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动作词库 - 语音技能交互研究</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="material-icons">record_voice_over</span>
+                语音技能交互研究
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#overview">研究概览</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#featured">特色内容</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="vocabularyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            语义词库
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vocabularyDropdown">
+                            <li><a class="dropdown-item" href="device-vocabulary.html">设备词典</a></li>
+                            <li><a class="dropdown-item" href="space-vocabulary.html">空间词典</a></li>
+                            <li><a class="dropdown-item active" href="action-vocabulary.html">动作词库</a></li>
+                            <li><a class="dropdown-item" href="status-vocabulary.html">状态词库</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>动作词库</h1>
+                    <p class="lead">构建丰富的设备控制动作词汇体系，实现自然流畅的语音控制</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="content-block">
+                            <h2>动作词库的意义</h2>
+                            <p>动作词库是语音交互系统中的核心组成部分，它使系统能够理解用户想要执行的具体操作，从而准确响应用户的控制指令。一个完善的动作词库能够：</p>
+                            <ul>
+                                <li>识别多样化的控制表达方式</li>
+                                <li>理解用户的操作意图</li>
+                                <li>支持复杂的设备控制场景</li>
+                                <li>提升用户交互体验的自然度</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>动作词库分类</h2>
+                            <p>动作词库可以根据控制目的和操作类型进行分类：</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>开关类动作</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>控制设备的开启和关闭状态的动作词汇。</p>
+                                    <div class="example-box">
+                                        <h4>开启类：</h4>
+                                        <ul>
+                                            <li>"打开"、"开启"、"启动"、"开"</li>
+                                            <li>"点亮"（针对灯具）、"打开电源"</li>
+                                            <li>"激活"、"运行"、"使用"</li>
+                                        </ul>
+                                        <h4>关闭类：</h4>
+                                        <ul>
+                                            <li>"关闭"、"关掉"、"关上"、"关"</li>
+                                            <li>"熄灭"（针对灯具）、"断电"</li>
+                                            <li>"停止"、"终止"、"暂停"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>调节类动作</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>调整设备参数或状态的动作词汇。</p>
+                                    <div class="example-box">
+                                        <h4>增加类：</h4>
+                                        <ul>
+                                            <li>"调高"、"增加"、"提高"、"加大"</li>
+                                            <li>"调亮"（针对灯光）、"调热"（针对温度）</li>
+                                            <li>"放大"（针对音量）、"加强"</li>
+                                        </ul>
+                                        <h4>减少类：</h4>
+                                        <ul>
+                                            <li>"调低"、"减少"、"降低"、"减小"</li>
+                                            <li>"调暗"（针对灯光）、"调冷"（针对温度）</li>
+                                            <li>"缩小"（针对音量）、"减弱"</li>
+                                        </ul>
+                                        <h4>设定类：</h4>
+                                        <ul>
+                                            <li>"设置为"、"调到"、"改成"</li>
+                                            <li>"固定在"、"定在"、"保持在"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>模式类动作</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>切换设备工作模式的动作词汇。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"切换到"、"改为"、"使用"</li>
+                                            <li>"开启xx模式"、"进入xx模式"</li>
+                                            <li>"应用"、"启用"、"采用"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>查询类动作</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>获取设备信息或状态的动作词汇。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"查看"、"检查"、"了解"</li>
+                                            <li>"显示"、"告诉我"、"汇报"</li>
+                                            <li>"是否"、"有没有"（用于状态查询）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>场景类动作</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>触发预设场景或组合操作的动作词汇。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"执行"、"启动"、"触发"</li>
+                                            <li>"准备"、"设置"（如"准备睡觉"、"设置回家模式"）</li>
+                                            <li>"开始"、"进入"（如"开始电影模式"）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>动作词库实现方法</h2>
+                            <p>构建高效的动作词库需要采用以下方法：</p>
+                            
+                            <div class="implementation-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h3>动作同义词映射</h3>
+                                        <p>建立不同表达方式与标准动作之间的映射关系，如将"打开"、"开启"、"启动"等映射到同一个开启动作。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h3>设备特定动作关联</h3>
+                                        <p>针对不同类型的设备，关联特定的动作词汇，如灯具的"点亮"、"调亮"，音响的"播放"、"暂停"等。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h3>动作参数提取</h3>
+                                        <p>从用户表达中提取动作相关的参数，如"调高音量到80%"中的数值参数，"将温度调到26度"中的目标值等。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h3>复合动作处理</h3>
+                                        <p>处理包含多个动作的复杂指令，如"打开客厅的灯并调亮一点"，需要拆分为"打开"和"调亮"两个动作。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h3>上下文动作理解</h3>
+                                        <p>结合对话上下文理解隐含的动作，如用户说"再亮一点"，系统需要根据上下文理解这是"调亮"动作。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>实际应用案例</h2>
+                            
+                            <div class="case-study">
+                                <h3>案例一：同义动作识别</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>把客厅的灯点亮</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已打开客厅的灯</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统将"点亮"识别为"打开"的同义词，并执行了相同的开灯操作。尽管用户使用了不同的表达方式，系统仍能准确理解用户意图。</p>
+                            </div>
+                            
+                            <div class="case-study">
+                                <h3>案例二：设备特定动作</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>播放我喜欢的歌单</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，正在通过客厅音响播放"我的收藏"歌单</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统识别"播放"是音频设备的特定动作，并自动关联到合适的设备（音响）执行操作，无需用户明确指定设备。</p>
+                            </div>
+                            
+                            <div class="case-study">
+                                <h3>案例三：复合动作处理</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>打开空调并设置为26度</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已打开空调并将温度设置为26度</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统成功识别并处理了包含两个动作的复合指令："打开"和"设置温度"，并按顺序执行了这两个操作。</p>
+                            </div>
+                            
+                            <div class="case-study">
+                                <h3>案例四：上下文动作理解</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>客厅的灯开着吗？</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>是的，客厅的灯目前是开着的</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>那就关掉吧</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已关闭客厅的灯</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统通过上下文理解用户的"关掉"动作应用于之前提到的"客厅的灯"，尽管用户在第二句中没有明确指出控制对象。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>动作词库与其他词库的协同</h2>
+                            <p>动作词库需要与其他词库协同工作，形成完整的语义理解体系：</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>与设备词典协同</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>动作词库与设备词典结合，确定哪些动作可以应用于特定设备，如"播放"适用于音响但不适用于灯具。</p>
+                                    <div class="example-box">
+                                        <h4>协同示例：</h4>
+                                        <p>"<span class="text-danger">打开</span><span class="text-success">电视</span>"</p>
+                                        <p>动作词库：识别"打开"为控制动作</p>
+                                        <p>设备词典：识别"电视"为可控设备</p>
+                                        <p>协同判断：确认"打开"动作可应用于"电视"设备</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>与空间词典协同</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>动作词库与空间词典结合，确定动作应用的具体位置，如"关闭客厅的灯"中的"客厅"指定了动作的空间范围。</p>
+                                    <div class="example-box">
+                                        <h4>协同示例：</h4>
+                                        <p>"<span class="text-danger">关闭</span><span class="text-primary">卧室</span>的<span class="text-success">灯</span>"</p>
+                                        <p>动作词库：识别"关闭"为控制动作</p>
+                                        <p>空间词典：识别"卧室"为空间位置</p>
+                                        <p>设备词典：识别"灯"为照明设备</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>与状态词库协同</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>动作词库与状态词库结合，确定动作导致的状态变化，如"调亮"会增加灯光亮度，"调低"会减小音量等。</p>
+                                    <div class="example-box">
+                                        <h4>协同示例：</h4>
+                                        <p>"<span class="text-danger">调高</span><span class="text-success">音量</span><span class="text-info">30%</span>"</p>
+                                        <p>动作词库：识别"调高"为增加类动作</p>
+                                        <p>状态词库：识别"音量"为可调参数</p>
+                                        <p>程度词库：识别"30%"为调整幅度</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>动作词库优化建议</h2>
+                            <div class="tips-box">
+                                <ul>
+                                    <li><strong>动作同义词扩展：</strong> 持续收集用户的不同表达方式，扩充动作同义词库</li>
+                                    <li><strong>设备动作关联：</strong> 建立设备类型与适用动作的关联矩阵，提高动作识别的准确性</li>
+                                    <li><strong>动作参数标准化：</strong> 统一处理不同表达方式下的参数提取，如"调到26度"和"设置为26度"</li>
+                                    <li><strong>复合动作拆解：</strong> 改进复合指令的拆解算法，准确识别多个连续或并列的动作</li>
+                                    <li><strong>上下文动作推断：</strong> 增强基于上下文的动作推断能力，处理省略和指代情况</li>
+                                    <li><strong>方言表达适配：</strong> 考虑地域差异，适配不同方言中的动作表达方式</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 相关内容推荐 -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">相关内容推荐</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">devices</span>
+                        </div>
+                        <h3>设备词典</h3>
+                        <p>了解如何构建设备名称识别体系，提升语音交互准确性</p>
+                        <a href="device-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">home</span>
+                        </div>
+                        <h3>空间词典</h3>
+                        <p>探索家居空间位置识别体系，实现精准的空间定位与控制</p>
+                        <a href="space-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">tune</span>
+                        </div>
+                        <h3>状态词库</h3>
+                        <p>了解如何处理设备状态的模糊表达和精确控制</p>
+                        <a href="status-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>语音技能交互研究</h4>
+                    <p>打造自然、高效、个性化的语音交互体验</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="footer-links">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="../index.html#overview">研究概览</a></li>
+                        <li><a href="../index.html#featured">特色内容</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                    <p class="copyright">© 2023 语音技能交互研究. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- JavaScript 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

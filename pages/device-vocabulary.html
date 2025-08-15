@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设备词典 - 语音技能交互研究</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="material-icons">record_voice_over</span>
+                语音技能交互研究
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#overview">研究概览</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#featured">特色内容</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="vocabularyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            语义词库
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vocabularyDropdown">
+                            <li><a class="dropdown-item active" href="device-vocabulary.html">设备词典</a></li>
+                            <li><a class="dropdown-item" href="space-vocabulary.html">空间词典</a></li>
+                            <li><a class="dropdown-item" href="action-vocabulary.html">动作词库</a></li>
+                            <li><a class="dropdown-item" href="status-vocabulary.html">状态词库</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>设备词典</h1>
+                    <p class="lead">构建全面的设备名称识别体系，提升语音交互准确性</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="content-block">
+                            <h2>设备词典的重要性</h2>
+                            <p>设备词典是语音交互系统中至关重要的组成部分，它使系统能够准确识别用户提到的各种智能设备，无论用户使用正式名称还是日常称呼。一个完善的设备词典能够：</p>
+                            <ul>
+                                <li>提高语音识别准确率</li>
+                                <li>减少用户沟通成本</li>
+                                <li>支持多样化的表达方式</li>
+                                <li>增强系统的自然语言理解能力</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>设备词典构成</h2>
+                            <p>一个完整的设备词典应包含以下几个方面：</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>正式名称</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>设备的官方完整名称，通常包含品牌、型号和功能描述等信息。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"185动感音箱"</li>
+                                            <li>"智能温控器T2000"</li>
+                                            <li>"全屋智能照明系统"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>通俗名称</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>用户日常使用的简化称呼，更符合自然语言习惯。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"音箱"</li>
+                                            <li>"温控器"</li>
+                                            <li>"灯"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>位置修饰词</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>与空间词典结合使用，指明设备的具体位置。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"客厅的灯"</li>
+                                            <li>"卧室音箱"</li>
+                                            <li>"厨房温控器"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>功能修饰词</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>描述设备特定功能或状态的词语。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"主灯"</li>
+                                            <li>"氛围灯"</li>
+                                            <li>"阅读灯"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>用户自定义名称</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>允许用户为设备创建个性化的称呼，增强系统灵活性。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"小白"（指代特定音箱）</li>
+                                            <li>"夜灯"（用户自定义的床头灯名称）</li>
+                                            <li>"老伙计"（用户对长期使用的设备的昵称）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>设备词典实现方法</h2>
+                            <p>构建高效的设备词典需要采用以下方法：</p>
+                            
+                            <div class="implementation-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h3>基础词库建设</h3>
+                                        <p>收集常见智能家居设备的标准名称和通俗称呼，建立基础词库。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h3>同义词映射</h3>
+                                        <p>建立不同称呼与标准设备名称之间的映射关系，确保系统能理解各种表达方式。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h3>用户自定义机制</h3>
+                                        <p>提供界面让用户为设备添加自定义名称，并将这些名称纳入个人词典。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h3>机器学习优化</h3>
+                                        <p>通过用户交互数据不断学习和优化词典，提高识别准确率。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h3>多模态结合</h3>
+                                        <p>结合语音、文本和视觉信息，增强设备识别能力。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>实际应用案例</h2>
+                            
+                            <div class="case-study">
+                                <h3>案例一：模糊指代解析</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>把那个灯关掉</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>您是想关闭客厅的主灯，还是氛围灯？</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>主灯</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已关闭客厅主灯</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统通过设备词典识别出用户提到的是"灯"，但由于指代不明确，系统列出当前环境中可能的灯具选项，让用户进一步确认。</p>
+                            </div>
+                            
+                            <div class="case-study">
+                                <h3>案例二：自定义名称识别</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>小白，播放我喜欢的歌单</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，通过卧室音箱为您播放"我的收藏"歌单</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">用户使用自定义名称"小白"指代卧室的智能音箱，系统通过个人设备词典成功识别并执行相应操作。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>设备词典优化建议</h2>
+                            <div class="tips-box">
+                                <ul>
+                                    <li><strong>持续更新：</strong> 随着新设备的加入，定期更新词典内容</li>
+                                    <li><strong>地域差异：</strong> 考虑不同地区用户的称呼习惯差异</li>
+                                    <li><strong>模糊匹配：</strong> 实现近似词匹配，容忍用户表达的细微差异</li>
+                                    <li><strong>上下文关联：</strong> 结合对话历史和用户习惯进行智能推断</li>
+                                    <li><strong>反馈机制：</strong> 当识别不确定时，通过询问获取用户确认</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 相关内容推荐 -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">相关内容推荐</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">home</span>
+                        </div>
+                        <h3>空间词典</h3>
+                        <p>了解如何构建空间位置词汇体系，与设备词典协同工作</p>
+                        <a href="space-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">touch_app</span>
+                        </div>
+                        <h3>动作词库</h3>
+                        <p>探索设备控制动作的同义词表达及其实现方法</p>
+                        <a href="action-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">tune</span>
+                        </div>
+                        <h3>状态词库</h3>
+                        <p>了解如何处理设备状态的模糊表达和精确控制</p>
+                        <a href="status-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>语音技能交互研究</h4>
+                    <p>打造自然、高效、个性化的语音交互体验</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="footer-links">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="../index.html#overview">研究概览</a></li>
+                        <li><a href="../index.html#featured">特色内容</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                    <p class="copyright">© 2023 语音技能交互研究. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- JavaScript 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

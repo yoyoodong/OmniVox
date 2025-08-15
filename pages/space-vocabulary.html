@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间词典 - 语音技能交互研究</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="material-icons">record_voice_over</span>
+                语音技能交互研究
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#overview">研究概览</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#featured">特色内容</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="vocabularyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            语义词库
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vocabularyDropdown">
+                            <li><a class="dropdown-item" href="device-vocabulary.html">设备词典</a></li>
+                            <li><a class="dropdown-item active" href="space-vocabulary.html">空间词典</a></li>
+                            <li><a class="dropdown-item" href="action-vocabulary.html">动作词库</a></li>
+                            <li><a class="dropdown-item" href="status-vocabulary.html">状态词库</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>空间词典</h1>
+                    <p class="lead">构建家居空间位置识别体系，实现精准的空间定位与控制</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="content-block">
+                            <h2>空间词典的重要性</h2>
+                            <p>空间词典是语音交互系统中不可或缺的组成部分，它使系统能够理解用户所指的具体空间位置，从而精准地控制特定区域内的设备。一个完善的空间词典能够：</p>
+                            <ul>
+                                <li>提高位置指令的识别准确率</li>
+                                <li>支持多种空间表达方式</li>
+                                <li>实现基于位置的智能场景联动</li>
+                                <li>增强系统的空间感知能力</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>空间词典的层次结构</h2>
+                            <p>一个完整的空间词典应包含多个层次的空间概念：</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>宏观空间</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>描述整体建筑或大型区域的空间概念。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"家"、"办公室"、"别墅"</li>
+                                            <li>"一号楼"、"A座"</li>
+                                            <li>"前院"、"后院"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>楼层空间</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>描述建筑物内不同楼层的空间概念。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"一楼"、"二楼"、"顶楼"</li>
+                                            <li>"地下室"、"阁楼"</li>
+                                            <li>"楼上"、"楼下"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>功能区域</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>描述具有特定功能的房间或区域。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"客厅"、"卧室"、"厨房"、"卫生间"</li>
+                                            <li>"书房"、"餐厅"、"阳台"</li>
+                                            <li>"走廊"、"玄关"、"储藏室"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>功能区细分</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>描述功能区内的特定位置或子区域。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"主卧"、"次卧"、"客卧"</li>
+                                            <li>"餐厅角落"、"客厅中央"</li>
+                                            <li>"厨房操作台"、"卫生间洗漱区"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>方位描述</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>描述空间中的相对位置关系。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"左边"、"右边"、"前面"、"后面"</li>
+                                            <li>"上方"、"下方"、"旁边"</li>
+                                            <li>"东侧"、"西侧"、"南面"、"北面"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>用户自定义空间</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>用户为特定区域创建的个性化命名。</p>
+                                    <div class="example-box">
+                                        <h4>示例：</h4>
+                                        <ul>
+                                            <li>"工作区"（指代书房的一角）</li>
+                                            <li>"休闲区"（指代客厅的沙发区域）</li>
+                                            <li>"小宝的房间"（指代某个特定的卧室）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>空间词典实现方法</h2>
+                            <p>构建高效的空间词典需要采用以下方法：</p>
+                            
+                            <div class="implementation-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h3>空间层次建模</h3>
+                                        <p>建立从宏观到微观的空间层次结构，形成完整的空间关系网络。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h3>空间同义词映射</h3>
+                                        <p>建立不同表达方式与标准空间名称之间的映射关系，如"洗手间"、"卫生间"、"厕所"等。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h3>空间关系推理</h3>
+                                        <p>实现基于空间关系的推理能力，如理解"楼上的卧室"、"厨房旁边的餐厅"等复合表达。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h3>用户自定义机制</h3>
+                                        <p>提供界面让用户为特定空间添加自定义名称，并将这些名称纳入个人空间词典。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h3>空间感知集成</h3>
+                                        <p>结合传感器数据和用户行为分析，增强系统的空间感知能力，如自动识别用户当前所在房间。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>实际应用案例</h2>
+                            
+                            <div class="case-study">
+                                <h3>案例一：多层次空间定位</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>把二楼主卧的灯打开</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已打开二楼主卧的灯</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统识别出多层次空间定位信息："二楼"（楼层）+"主卧"（功能区），并准确执行相应的设备控制。</p>
+                            </div>
+                            
+                            <div class="case-study">
+                                <h3>案例二：相对位置理解</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>把客厅沙发旁边的落地灯调亮一点</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已将客厅沙发旁的落地灯亮度调高</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统理解了"客厅"（功能区）+"沙发旁边"（相对位置）的复合空间表达，并准确识别出用户指的是哪个灯具。</p>
+                            </div>
+                            
+                            <div class="case-study">
+                                <h3>案例三：自定义空间名称</h3>
+                                <div class="dialogue-example">
+                                    <div class="user-message">
+                                        <span class="material-icons">person</span>
+                                        <div class="message-content">
+                                            <p>打开工作区的台灯</p>
+                                        </div>
+                                    </div>
+                                    <div class="system-message">
+                                        <span class="material-icons">smart_toy</span>
+                                        <div class="message-content">
+                                            <p>好的，已打开书房工作区的台灯</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="case-analysis">系统识别出用户自定义的空间名称"工作区"，并将其映射到实际的物理位置（书房的一角），然后执行相应的设备控制。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>空间词典与其他词典的协同</h2>
+                            <p>空间词典需要与其他词典协同工作，形成完整的语义理解体系：</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>与设备词典协同</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>空间词典与设备词典结合，可以准确识别特定位置的特定设备，如"客厅的落地灯"、"厨房的抽油烟机"等。</p>
+                                    <div class="example-box">
+                                        <h4>协同示例：</h4>
+                                        <p>"把<span class="text-primary">卧室</span>的<span class="text-success">台灯</span>打开"</p>
+                                        <p>空间词典：识别"卧室"为功能区</p>
+                                        <p>设备词典：识别"台灯"为照明设备</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>与动作词库协同</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>空间词典与动作词库结合，可以实现针对特定空间的控制动作，如"打开客厅的灯"、"关闭厨房的电源"等。</p>
+                                    <div class="example-box">
+                                        <h4>协同示例：</h4>
+                                        <p>"<span class="text-danger">关闭</span><span class="text-primary">一楼</span>所有的<span class="text-success">电器</span>"</p>
+                                        <p>空间词典：识别"一楼"为楼层空间</p>
+                                        <p>动作词库：识别"关闭"为控制动作</p>
+                                        <p>设备词典：识别"电器"为设备类别</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3>与状态词库协同</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>空间词典与状态词库结合，可以实现对特定空间内设备状态的查询和调整，如"客厅现在温度多少"、"把卧室的灯调亮一点"等。</p>
+                                    <div class="example-box">
+                                        <h4>协同示例：</h4>
+                                        <p>"把<span class="text-primary">客厅</span>的温度<span class="text-warning">调高</span><span class="text-info">两度</span>"</p>
+                                        <p>空间词典：识别"客厅"为功能区</p>
+                                        <p>状态词库：识别"调高"为状态变化</p>
+                                        <p>程度词库：识别"两度"为调整幅度</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>空间词典优化建议</h2>
+                            <div class="tips-box">
+                                <ul>
+                                    <li><strong>空间层次化管理：</strong> 建立清晰的空间层次结构，便于系统进行空间推理</li>
+                                    <li><strong>地域差异适配：</strong> 考虑不同地区用户对空间的称呼习惯差异，如"卫生间"与"洗手间"</li>
+                                    <li><strong>上下文感知：</strong> 结合用户当前位置和使用场景，优化空间识别准确率</li>
+                                    <li><strong>模糊空间表达处理：</strong> 处理"这里"、"那边"等模糊空间表达，通过上下文或传感器数据进行推断</li>
+                                    <li><strong>多模态融合：</strong> 结合视觉信息和用户行为数据，增强空间感知能力</li>
+                                    <li><strong>空间关系图谱：</strong> 构建空间关系知识图谱，支持复杂的空间推理</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 相关内容推荐 -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">相关内容推荐</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">devices</span>
+                        </div>
+                        <h3>设备词典</h3>
+                        <p>了解如何构建设备名称识别体系，提升语音交互准确性</p>
+                        <a href="device-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">touch_app</span>
+                        </div>
+                        <h3>动作词库</h3>
+                        <p>探索设备控制动作的同义词表达及其实现方法</p>
+                        <a href="action-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="related-card">
+                        <div class="card-icon">
+                            <span class="material-icons">tune</span>
+                        </div>
+                        <h3>状态词库</h3>
+                        <p>了解如何处理设备状态的模糊表达和精确控制</p>
+                        <a href="status-vocabulary.html" class="btn btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>语音技能交互研究</h4>
+                    <p>打造自然、高效、个性化的语音交互体验</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="footer-links">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="../index.html#overview">研究概览</a></li>
+                        <li><a href="../index.html#featured">特色内容</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                    <p class="copyright">© 2023 语音技能交互研究. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- JavaScript 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

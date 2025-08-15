@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f9fafb" rx="20" ry="20"/>
+  
+  <!-- 中心人物轮廓 -->
+  <circle cx="400" cy="250" r="120" fill="#4F46E5" opacity="0.1"/>
+  
+  <!-- 人物头像 -->
+  <circle cx="400" cy="200" r="70" fill="#FFFFFF" stroke="#4F46E5" stroke-width="3"/>
+  
+  <!-- 简化的人脸 -->
+  <g transform="translate(400, 200)">
+    <!-- 眼睛 -->
+    <circle cx="-25" cy="-10" r="8" fill="#4F46E5"/>
+    <circle cx="25" cy="-10" r="8" fill="#4F46E5"/>
+    
+    <!-- 微笑 -->
+    <path d="M-30,20 Q0,40 30,20" fill="none" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- 身体轮廓 -->
+  <path d="M350,270 L350,380 Q400,400 450,380 L450,270" fill="#FFFFFF" stroke="#4F46E5" stroke-width="3"/>
+  
+  <!-- 人格特质连接 -->
+  <g>
+    <!-- 智能 -->
+    <line x1="400" y1="320" x2="250" y2="380" stroke="#4F46E5" stroke-width="2"/>
+    <circle cx="250" cy="380" r="40" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+    <text x="250" y="380" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#4F46E5">智能</text>
+    
+    <!-- 温暖 -->
+    <line x1="400" y1="320" x2="550" y2="380" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="550" cy="380" r="40" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <text x="550" y="380" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#F59E0B">温暖</text>
+    
+    <!-- 可靠 -->
+    <line x1="400" y1="320" x2="250" y2="470" stroke="#10B981" stroke-width="2"/>
+    <circle cx="250" cy="470" r="40" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <text x="250" y="470" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#10B981">可靠</text>
+    
+    <!-- 理解力强 -->
+    <line x1="400" y1="320" x2="550" y2="470" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="550" cy="470" r="40" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="550" y="470" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#8B5CF6">理解力强</text>
+  </g>
+  
+  <!-- 装饰元素：语音波纹 -->
+  <g transform="translate(400, 150)">
+    <path d="M-100,0 Q-50,-30 0,0 T100,0" fill="none" stroke="#4F46E5" stroke-width="2" opacity="0.5">
+      <animate attributeName="d" values="M-100,0 Q-50,-30 0,0 T100,0;M-100,0 Q-50,30 0,0 T100,0;M-100,0 Q-50,-30 0,0 T100,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-120,-20 Q-60,-50 0,-20 T120,-20" fill="none" stroke="#10B981" stroke-width="2" opacity="0.5">
+      <animate attributeName="d" values="M-120,-20 Q-60,-50 0,-20 T120,-20;M-120,-20 Q-60,10 0,-20 T120,-20;M-120,-20 Q-60,-50 0,-20 T120,-20" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-80,20 Q-40,-10 0,20 T80,20" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.5">
+      <animate attributeName="d" values="M-80,20 Q-40,-10 0,20 T80,20;M-80,20 Q-40,50 0,20 T80,20;M-80,20 Q-40,-10 0,20 T80,20" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- 标题 -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1F2937">语音助手角色设定</text>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="16" fill="#6B7280">温暖可靠的家庭助手</text>
+</svg> 
